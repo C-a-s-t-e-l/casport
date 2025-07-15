@@ -1,0 +1,114 @@
+:root {
+    --primary: #0f172a;
+    --secondary: #1e293b;
+    --accent: #7dd3fc;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, #7dd3fc, #38bdf8);
+}
+
+.skill-pill {
+    transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(30, 41, 59, 0.1);
+}
+
+.project-card {
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #1e293b, #1a2533);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.hero-image {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: 3px solid var(--secondary);
+}
+
+.timeline {
+    border-left: 2px dashed var(--accent);
+}
+
+.contact-input {
+    /* background-color: rgba(30, 41, 59, 0.7); */
+    transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #7dd3fc, transparent);
+}
